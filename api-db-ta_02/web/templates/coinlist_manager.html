@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Список торговых пар</title>
+  </head>
+  <body>
+    <h1>Список торговых пар</h1>
+    <form>
+      <label for="list-name">Название списка:</label>
+      <input type="text" id="list-name" name="list-name"><br>
+
+      <label for="api-key">API ключ:</label>
+      <select id="api-key" name="api-key">
+        <!-- options will be populated with API keys from the database -->
+      </select><br>
+
+      <label for="market-type">Тип маркета:</label>
+      <select id="market-type" name="market-type">
+        <option value="stock">Спот</option>
+        <option value="futures">Фьючерсы</option>
+      </select><br>
+
+      <label for="base-currency">Основная монета:</label>
+      <select id="base-currency" name="base-currency">
+        <!-- options will be populated based on the selected market type -->
+      </select><br>
+
+      <label for="search">Поиск:</label>
+      <input type="text" id="search" name="search"><br>
+
+      <label>Доступные торговые пары:</label>
+      <ul id="pairs">
+        <!-- list of available pairs will be populated based on the selected market type and base currency -->
+      </ul>
+
+      <button type="button" id="save-btn">Сохранить</button>
+      <button type="button" id="delete-btn">Удалить</button>
+    </form>
+
+    <h2>Сохраненные списки пар:</h2>
+    <ul id="saved-lists">
+      <!-- list of saved lists will be populated from the database -->
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>
