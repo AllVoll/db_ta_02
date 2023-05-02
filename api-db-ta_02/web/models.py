@@ -22,16 +22,6 @@ api_key_bot = Table('api_key_bot', Base.metadata,
 )
 
 
-# class ApiKeyBot(Base):
-#     __tablename__ = 'api_key_bot'
-
-#     api_key_id = Column(Integer, ForeignKey('api_keys.id'), primary_key=True)
-#     bot_id = Column(Integer, ForeignKey('bots.id'), primary_key=True)
-#     permissions = Column(Integer, nullable=False)
-
-#     api_key = relationship('ApiKey', back_populates='api_key_bots')
-#     bot = relationship('Bot', back_populates='api_key_bots')
-
 api_key_wallet = Table('api_key_wallet', Base.metadata,
     Column('api_key_id', Integer, ForeignKey('api_keys.id')),
     Column('wallet_id', Integer, ForeignKey('wallet.id'))
